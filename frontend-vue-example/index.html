@@ -1,0 +1,37 @@
+<html>
+    <head>
+            <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    </head>
+<body>
+    <div id="app">
+        {{ message }}
+    </div>
+
+    <div id="app2">
+        <span v-bind:title= "message">
+            Hover your mouse over me for a few seconds to see my dynamically bound title!
+        </span>
+    </div>
+
+    <div id="app3">
+        <span v-if="seen">Now you see me</span>
+        <span v-else="seen"> Do you seen me now?</span>
+    </div>
+
+    <div id="app4">
+        <ol>
+            <li v-for= "todo in todos">
+                {{ todo.text }}
+             </li>
+        </ol>
+    </div>
+
+    <div id="app5">
+        <p> {{message}} </p>
+        <button v-on:click= "reverseMessage"> Reverse Message </button>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="main.js"></script>
+</body>
+</html>
