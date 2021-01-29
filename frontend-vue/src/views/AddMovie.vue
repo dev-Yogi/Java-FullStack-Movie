@@ -16,7 +16,7 @@
 export default {
     data: () => ({
         movie: {
-            movieTitle: null,
+            movieTitle: "",
             movieLength: null,
             releaseDate: null,
             trailerUrl: null,

@@ -4,7 +4,7 @@
             <h1 class="title">Movies</h1>
         </div>
 
-        <router-link to="movie/add" tag="button" class="button is-primary"> Add Movie </router-link>
+        <router-link to="movies/add" tag="button" class="button is-primary"> Add Movie </router-link>
 
         <div class="content">
             <table>
