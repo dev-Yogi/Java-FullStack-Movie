@@ -10,6 +10,11 @@ const routes = [{
         component: Home
     },
     {
+        path: '/actor',
+        name: 'Actor',
+        component: () =>
+            import ('../views/AddActor.vue')
+    }, {
         path: '/actors',
         name: 'Actors',
         // route level code-splitting
@@ -19,11 +24,27 @@ const routes = [{
             import ( /* webpackChunkName: "about" */ '../views/Actors.vue')
     },
     {
-        path: '/actor',
-        name: 'Actor',
+        path: '/movies',
+        name: 'Movies',
         component: () =>
-            import ('../views/AddActor.vue')
-    }
+            import ('../views/Movies.vue')
+    },
+    {
+
+        path: '/movie/:id',
+        name: 'Movie',
+        component: () =>
+            import ('../views/MovieDetail.vue')
+    },
+    {
+        path: '/movie/add',
+        name: 'AddMovie',
+        component: () =>
+            import ('../views/AddMovie.vue')
+
+    },
+
+
 ]
 
 const router = new VueRouter({

@@ -20,7 +20,7 @@
                 <tr v-for="actor in actors" :key="actor.id">
                 <td>{{actor.id}}</td>
                 <td>{{actor.firstName}} {{actor.lastName}}</td>
-                <td>{{actor.dateOfBirth}}</td>
+                <td>{{ moment(actor.dateOfBirth).format("MM/DD/YYYY") }}</td>
               </tr>
             </tbody>
         </table>
