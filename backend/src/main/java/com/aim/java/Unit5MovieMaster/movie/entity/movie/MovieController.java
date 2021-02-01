@@ -6,8 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -33,4 +35,17 @@ public class MovieController {
         return movieRepository.save(movie);
     }
 
+    @PutMapping(path = "/{id}")
+    public @ResponseBody String updateMovie(@PathVariable(value = "id") Integer id, @RequestBody Movie movieDetails) {
+        Optional<Movie> optionalMovie = movieRepository.findById(id);
+        Movie movie = optionalMovie.get();
+        // movie.setMovieTitle(movieDetails.getMovieTitle());
+        // movie.setDirector(movieDetails.getDirector());
+        // movie.setGenre(movieDetails.getGenre());
+        // movie.setRating(movieDetails.getRating());
+        // movie.setActors(movieDetails.getActors());
+
+        movieRepository.save(movieDetails);
+        return "Updated";
+    }
 }
