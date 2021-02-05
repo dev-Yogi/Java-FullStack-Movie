@@ -38,12 +38,13 @@ public class MovieController {
     @PutMapping(path = "/{id}")
     public @ResponseBody String updateMovie(@PathVariable(value = "id") Integer id, @RequestBody Movie movieDetails) {
         Optional<Movie> optionalMovie = movieRepository.findById(id);
+
         Movie movie = optionalMovie.get();
-        // movie.setMovieTitle(movieDetails.getMovieTitle());
-        // movie.setDirector(movieDetails.getDirector());
-        // movie.setGenre(movieDetails.getGenre());
-        // movie.setRating(movieDetails.getRating());
-        // movie.setActors(movieDetails.getActors());
+        movie.setMovieTitle(movieDetails.getMovieTitle());
+        movie.setDirector(movieDetails.getDirector());
+        movie.setGenre(movieDetails.getGenre());
+        movie.setRating(movieDetails.getRating());
+        movie.setActors(movieDetails.getActors());
 
         movieRepository.save(movieDetails);
         return "Updated";
