@@ -1,6 +1,7 @@
 <template>
     <div>
-            <span>{{movie.moveTitle}}</span>
+            <span>{{movie.movieTitle}}</span>
+           
 
             <ul>
                 <li>{{movie.rating.rating}}</li>
@@ -15,7 +16,7 @@
 <script>
 export default {
     data: () => ({
-        movie: null
+        movie: "",
     }),
     async mounted(){
         const { data } = await this.$http.get('http://localhost:8080/api/movies/' + this.$route.params.id);

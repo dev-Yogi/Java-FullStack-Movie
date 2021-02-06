@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 
+
 Vue.use(VueRouter)
 
 const routes = [{
@@ -43,6 +44,12 @@ const routes = [{
             import ('../views/AddMovie.vue')
 
     },
+    {
+        path: '/movies/search',
+        name: 'Search',
+        component: () =>
+            import ('../components/Search.vue')
+    }
 
 
 ]

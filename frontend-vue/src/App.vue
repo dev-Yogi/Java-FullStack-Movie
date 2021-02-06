@@ -1,9 +1,11 @@
 <template>
   <div id="app">
+    <Search/>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/actors">Actors</router-link> |
-      <router-link to="/movies">Movies</router-link> |
+      <router-link to="/movies">Movies</router-link> 
+      
     </div>
 
       <div class="container">
@@ -11,6 +13,15 @@
         </div>
   </div>
 </template>
+<script>
+import Search from './components/Search'
+export default {
+ name: 'App',
+ components: {
+  Search
+ }
+}
+</script>
 
 <style>
 #app {

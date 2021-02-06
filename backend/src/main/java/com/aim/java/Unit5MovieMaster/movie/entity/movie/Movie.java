@@ -38,6 +38,8 @@ public class Movie {
     private Date releaseDate;
 
     private String trailerUrl;
+    
+    private String movieImg;
 
     @ManyToOne
     @JoinColumn(name = "director_id", nullable = false)
@@ -125,6 +127,14 @@ public class Movie {
 
     public void setTrailerUrl(String trailerUrl) {
         this.trailerUrl = trailerUrl;
+    }
+
+    public String getMovieImg() {
+        return movieImg;
+    }
+
+    public void setMovieImg(String movieImg) {
+        this.movieImg = movieImg;
     }
 
 }
