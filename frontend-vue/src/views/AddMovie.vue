@@ -122,7 +122,11 @@ export default {
             return data;
         },
         async getMovie(){
+<<<<<<< HEAD
             const data = await this.$http.get("http://localhost:8080/api/movies")
+=======
+            const data = await this.http.get("http://localhost:8080/api/movies")
+>>>>>>> 4632b29046ac3f73566dcffd0deaf86dfbbc5e3f
             console.log('getMovies() data', data)
             return data;
             
@@ -142,4 +146,8 @@ label.radio {
     margin-right: 1rem;
 }
 
+<<<<<<< HEAD
 </style>
+=======
+</style>
+>>>>>>> 4632b29046ac3f73566dcffd0deaf86dfbbc5e3f
