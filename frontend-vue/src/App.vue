@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Search/>
+    <Search :/>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/actors">Actors</router-link> |

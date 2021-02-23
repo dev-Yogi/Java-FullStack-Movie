@@ -122,7 +122,7 @@ export default {
             return data;
         },
         async getMovie(){
-            const data = await this.http.get("http://localhost:8080/api/movies")
+            const data = await this.$http.get("http://localhost:8080/api/movies")
             console.log('getMovies() data', data)
             return data;
             
